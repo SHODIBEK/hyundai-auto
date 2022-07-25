@@ -1,0 +1,321 @@
+extends pug/base
+
+append vars
+	- title = 'Главная страница'
+	- meta.description = 'Описание страницы'
+	- meta.viewport = 'width=device-width, initial-scale=1'
+	- link.icon = './favicon.ico'
+	- meta.formatDetection = 'telephone=no'
+	- meta.themeColor = '#002c5f'
+	- defaultLink = 'javascript:void(0);'
+block content
+	.wrapper
+		header
+			include pug/mobile-menu
+			.header-top
+				.container
+					.header-wrapper
+						.header-number
+							| +998 <span>71 225 85 20</span>
+						.header-number
+							| +998 <span>71 225 89 89</span>
+						.header-social
+							a(href="javascript:void(0);").icon
+								span.fb
+							a(href="javascript:void(0);").icon
+								span.instagram
+							a(href="javascript:void(0);").icon
+								span.telegram
+			.header-bottom
+				.container
+					.header-bottom__wrapper
+						.header-logo
+							img(src="logo.png")
+						.header-bottom__right
+							.header-nav
+								ul
+									li
+										a(href="javascript:void(0);")
+											span.home
+									li
+										a(href="#scene01")
+											| Модельный ряд
+									li
+										a(href="#scene02")
+											| Сервис центр
+									li
+										a(href="#scene03")
+											| Акция
+									li
+										a(href="#scene04")
+											| О компании
+									li
+										a(href="#scene05")
+											| Контакты
+							.header-lang
+								a(href="javascript:void(0);")
+									| рус
+								a(href="javascript:void(0);")
+									| o'zb
+			include pug/header-fixed
+		.top-slider
+			.container
+				.top-slider__items.owl-carousel
+					.top-slider__item
+						<picture class="top-slider__img">
+							<source srcset="images/content/1.jpg" media="(min-width: 992px)">
+							<source srcset="images/content/1tab.jpg" media="(min-width: 768px)">
+							<img srcset="images/content/1mobile.jpg">
+						</picture>
+						.top-slider__block
+							.top-slider__title
+								| Hyundai Accent.
+							.top-slider__subtitle
+								| Движение. опережающее мысль.
+							.top-slider__inner
+								.top-slider__text.opacity-text
+									| От:
+								.top-slider__price.opacity-price
+									<font id="price">215,990,000</font><span>uzs</span>
+					.top-slider__item
+						<picture class="top-slider__img">
+							<source srcset="images/content/2.jpg" media="(min-width: 992px)">
+							<source srcset="images/content/2tab.jpg" media="(min-width: 768px)">
+							<img srcset="images/content/2mob.jpg">
+						</picture>
+						.top-slider__block
+							.top-slider__title
+								| Hyundai Creta.
+							.top-slider__subtitle
+								| Для дорог и направлений.
+							.top-slider__inner
+								.top-slider__text.opacity-text
+									| От:
+								.top-slider__price.opacity-price
+									<font id="price">215,990,000</font><span>uzs</span>
+		.lineup#scene01
+			.container
+				.lineup-title.title
+					h1 Модельный ряд
+				.lineup-subtitle.subtitle
+					p Автомобили Hyundai – надежность, престижность, комфорт и безопасность по выгодной цене.
+				.lineup-wrapper
+					.lineup-item
+						.lineup-top
+							.lineup-left
+								.lineup-left__top
+									.lineup-left__carname
+										| Accent
+									.lineup-left__text
+										| От:
+									.lineup-left__price
+										font
+											| 215,990,000
+										span
+											| uzs
+							.lineup-right
+								.lineup-right__item
+									.lineup-right__img
+										img(src="images/icons/icon0.svg")
+									.lineup-right__wrapper
+										.lineup-right__text
+											span
+												| Объём двигателя:
+										.lineup-right__desc
+											span
+												| 1,4/1,6 <small>см<sup>3</sup></small>
+								.lineup-right__item
+									.lineup-right__img
+										img(src="images/icons/icon2.svg")
+									.lineup-right__wrapper
+										.lineup-right__text
+											span
+												| Макс. мощность:
+										.lineup-right__desc
+											span
+												| 100/123 <small>л.с.</small>
+								.lineup-right__item
+									.lineup-right__img
+										img(src="images/icons/icon3.svg")
+									.lineup-right__wrapper
+										.lineup-right__text
+											span
+												| Расход топлива:
+										.lineup-right__desc
+											span
+												| 5,7/6,6 <small>л/100 км</small>
+						.lineup-bottom
+							.lineup-left
+								.lineup-left__img.revealator-slideright.revealator-once.revealator-delay1.revealator-duration10
+									img(src="images/content/car1.png")
+							.lineup-right
+								.lineup-right__desc
+									span
+										| Новый Accent оснащён 2 типами двигателя: новейшим Kappa 1.4 MPI и усовершенствованным Gamma 1.6 MP.
+								.lineup-right__btn
+									a(href="javascript:void(0);").btn
+										| Технические характеристики
+					.lineup-item.even
+						.lineup-top
+							.lineup-left
+								.lineup-left__top
+									.lineup-left__carname
+										| Creta
+									.lineup-left__text
+										| От:
+									.lineup-left__price
+										font
+											| 215,990,000
+										span
+											| uzs
+							.lineup-right
+								.lineup-right__item
+									.lineup-right__img
+										img(src="images/icons/icon0.svg")
+									.lineup-right__wrapper
+										.lineup-right__text
+											span
+												| Объём двигателя:
+										.lineup-right__desc
+											span
+												| 1,6/2,0 <small>см<sup>3</sup></small>
+								.lineup-right__item
+									.lineup-right__img
+										img(src="images/icons/icon2.svg")
+									.lineup-right__wrapper
+										.lineup-right__text
+											span
+												| Макс. мощность:
+										.lineup-right__desc
+											span
+												| 100/123 <small>л.с.</small>
+								.lineup-right__item
+									.lineup-right__img
+										img(src="images/icons/icon3.svg")
+									.lineup-right__wrapper
+										.lineup-right__text
+											span
+												| Расход топлива:
+										.lineup-right__desc
+											span
+												| 5,7/6,6 <small>л/100 км</small>
+						.lineup-bottom
+							.lineup-left
+								.lineup-left__img.revealator-slideleft.revealator-delay1.revealator-duration10.revealator-once
+									img(src="images/content/car2.png")
+							.lineup-right
+								.lineup-right__desc
+									span
+										| Creta оснащён 2 типами двигателя:  Gamma 1.6 D-CVVT и Nu 2.0 D-CVVTm
+								.lineup-right__btn
+									a(href="javascript:void(0);").btn
+										| Технические характеристики
+		.service#scene02
+			.container
+				.service-wrapper
+					.service-title.title
+						h1  Сервис центр
+					.service-subtitle.subtitle
+						p Hyundai Auto Asia – официальный сервисный центр в Ташкенте.
+					.service-text
+						p
+							| Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей, их желаний и потребностей.
+					.service-block
+						.service-img(style="background-image: url(images/content/car_large.jpg)")
+						.service-link
+							a(href="javascript:void(0);").btn
+								| Записаться на ТО
+		.stock#scene03
+			.container
+				.stock-wrapper
+					.stock-left
+						.stock-img(style="background-image: url(images/content/car_small.jpg)")
+					.stock-right
+						.stock-title.title
+							h1
+								| Акция!
+						.stock-subtitle.subtitle
+							p
+								| Бесплатная экспресс-диагностика для владельцев Hyundai
+						.stock-desc
+							p
+								| Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте.
+						.stock-link
+							a(href="javascript:void(0);").btn
+								| Записаться на экспресс-диагностика
+		.about#scene04
+			.container
+				.about-title.title
+					h1
+						| О компании
+				.about-subtitle.subtitle
+					p
+						| Hyundai Auto Asia – официальный дистрибьютор в Узбекистане.
+				.about-text
+					p
+						| Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте.
+					p
+						| Распишите о разделах сайта, укажите, где и что находиться, что можно найти в фотогалерее, каталоге продукции. Текст необходимо составлять живой, чтобы посетитель читал его быстро и легко, заинтересовываясь с каждой строчкой. Не стоит перегружать текст специальными терминами или писать объемный материал. Создайте лаконичное и интересное описание Вашей
+				.about-slider.owl-carousel
+					.about-slider__item
+						.about-slider__img(style="background-image: url(images/content/car_large.jpg)")
+					.about-slider__item
+						.about-slider__img(style="background-image: url(images/content/car_large.jpg)")
+		.contact#scene05
+			.container
+				.contact-wrapper
+					.contact-map
+						<iframe src="https://yandex.ua/map-widget/v1/-/CBRjaCHX1B" frameborder="1" allowfullscreen="true"></iframe>
+					.contact-info
+						.contact-left
+							.contact-left__item
+								.contact-title
+									| Инфоцентр:
+								.contact-num
+									| +998 <span>71 225 85 20</span>
+							.contact-left__item
+								.contact-title
+									| Продажа автомобилей:
+								.contact-num
+									| +998 <span>71 225 89 89</span>
+							.contact-left__item
+								.contact-title
+									| Станция техобслуживания:
+								.contact-num
+									| +998 <span>71 225 89 89</span>
+							.contact-left__item
+								.contact-title
+									| Название отдела:
+								.contact-num
+									| +998 <span>71 225 89 89</span>
+						.contact-right
+							.contact-title
+								| пр-т Амира Темура, 77 А, <br>Юнусобадский р-он <br>Ташкент <br>100009
+							.contact-social
+								a(href="javascript:void(0);")
+									span.fb
+								a(href="javascript:void(0);")
+									span.instagram
+								a(href="javascript:void(0);")
+									span.telegram
+		.dealer-block
+			.container
+				.dealer-block-item
+					.defaul-page
+						h3 Дилерский центр 3
+						p Телефон доверия: <span>+998 <b style="color: #002c5f;">90 005 72 08</b></span>
+						p Aдрес:  <span>г. Ташкент, Яккасарайский р-он, ул. Малая кольцевая, дом 22 Б</span>
+						p E-mail:  <span>mail@mail.uz</span>
+		footer
+			.container
+				.footer-wrapper
+					.footer-left
+						span
+							| Вся представленная на сайте информация, касающаяся  автомобилей и сервисного обслуживания, носит информационный характер и не является публичной офертой, определяемой положениями ст. 426 ГК РУз. Все цены указанные на данном сайте носят информационный характер и являются максимально рекомендуемыми розничными ценами по расчетам дистрибьютора (СП ООО «Hyundai auto asia»). Опубликованная на данном сайте информация может быть изменена в любое время без предварительного уведомления.
+					.footer-right
+						span
+							| © СП ООО «Hyundai auto asia», 2018
+						img(src="images/icons/logo.svg")
+		include pug/modals
+		include pug/modal-stock
+		<div id="dtBox"></div>

@@ -1,0 +1,61 @@
+.fb {
+	background-image: url("../images/icons/fb.svg");
+
+	&:hover {
+		background-image: url("../images/icons/fb_hover.svg");
+	}
+}
+
+.instagram {
+	background-image: url("../images/icons/instagram.svg");
+
+	&:hover {
+		background-image: url("../images/icons/instagram_hover.svg");
+	}
+}
+
+.telegram {
+	background-image: url("../images/icons/telegram.svg");
+
+	&:hover {
+		background-image: url("../images/icons/telegram_hover.svg");
+	}
+}
+
+.home {
+	background-image: url("../images/icons/home.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background-image: url("../images/icons/home_hover.svg");
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.burger {
+	position: relative;
+	display: inline-block;
+	width: 15px;
+	height: 2px;
+	background: $color-black;
+
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 15px;
+		height: 2px;
+		background: $color-black;
+	}
+
+	&::before {
+		top: -5px;
+	}
+
+	&::after {
+		top: 5px;
+	}
+}

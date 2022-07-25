@@ -1,0 +1,23 @@
+.modal-stock.modal
+	.modal-wrapper
+		form(action="#" method="GET")
+			span.close
+			.modal-form
+				.modal-title
+					| Записаться на экспресс-диагностику
+				.modal-input.input-style.name
+					input(type="text" autocomplete='off' id="name2")
+					label(for="name2") Ваше имя и фамилия
+				.modal-input.input-style.phone
+					input(type="tel" autocomplete='off' id="phone2")
+					label(for="phone2") Ваш телефон
+				.modal-input.input-style.email
+					input(type="email" autocomplete='off' id="email2")
+					label(for="email2") Ваш адрес электронной почты
+				.modal-form__checkbox
+					input(type="checkbox" id="checkbox2")
+					label(for="checkbox2")
+						| Я даю согласие на обработку персональных данных.<br> <a href="javascript:void(0);">Прочитать пользовательское соглашение</a>
+				.modal-btn
+					button(type="submit").btn
+						| Отправить заявку

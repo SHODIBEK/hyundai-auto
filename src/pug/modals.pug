@@ -1,0 +1,49 @@
+.modal.modal-to
+	.container
+		.modal-wrapper
+			form(action="#" method="GET")
+				span.close
+				.modal-form
+					.modal-title
+						| Запись на ТО
+					.modal-select.input-style
+						select
+							option
+								| Выберите модель
+							option
+								| Название модели
+							option
+								| Название модели
+							option
+								| Название модели
+							option
+								| Название модели
+							option
+								| Название модели
+							option
+								| Название модели
+							option
+								| Название модели
+					.modal-car.input-style
+						input(type="tel" id="car" class="car")
+						label(for="car") Укажите пробег машины
+					.modal-date.input-style
+						input(type="text" data-field="date"  id="time" class="time" readonly)
+						label(for="time") Укажите дату желаемого визита
+					.modal-input.input-style.name
+						input(type="text" autocomplete='off' id="name")
+						label(for="name") Ваше имя и фамилия
+					.modal-small__wrapper
+						.modal-input.small-input.input-style.phone
+							input(type="tel" autocomplete='off' id="phone")
+							label(for="phone") Ваш телефон
+						.modal-input.small-input.input-style.email
+							input(type="email" autocomplete='off' id="email")
+							label(for="email") Ваш адрес электронной почты
+					.modal-form__checkbox
+						input(type="checkbox" id="checkbox")
+						label(for="checkbox")
+							| Я даю согласие на обработку персональных данных.<br> <a href="javascript:void(0);">Прочитать пользовательское соглашение</a>
+					.modal-btn
+						button(type="submit").btn
+							| Отправить заявку

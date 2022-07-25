@@ -1,0 +1,719 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-regular;
+	font-size: 16px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+a:active,
+a:hover,
+a:focus {
+	outline: none;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.form-group {
+	position: relative;
+}
+
+input,
+textarea {
+	outline: none;
+}
+
+button,
+select {
+	outline: none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn {
+	display: inline-block;
+	padding: 0 15px;
+	height: 37px;
+	font-family: $font-regular;
+	font-size: 14px;
+	line-height: 35px;
+	text-decoration: none;
+	color: $color-white;
+	background: $color-hyundai;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: $color-hover;
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.container {
+	padding: 0 20px;
+	max-width: 100%;
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		overflow-x: hidden;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+	.container {
+		padding: 0 35px;
+		width: 100%;
+	}
+
+	.wrapper {
+		overflow-x: hidden;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		padding: 0;
+		max-width: 1370px;
+		margin: 0 auto;
+	}
+}
+
+.opacity-text {
+	transform: translate(-100px, 0);
+	opacity: 0;
+
+	&.active {
+		transform: translate(0, 0);
+		opacity: 1;
+		transition: all 600ms  ease-in-out;
+	}
+}
+
+.opacity-price {
+	transform: translate(-100px, 0);
+	opacity: 0;
+
+	&.active {
+		transform: translate(0, 0);
+		opacity: 1;
+		transition: all 750ms ease-in-out;
+	}
+}
+
+.dtpicker-overlay {
+	z-index: 2000;
+	display: none;
+	background: rgba(0, 0, 0, 0.2);
+	font-size: 12px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dtpicker-mobile {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.dtpicker-overlay * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dtpicker-bg {
+	width: 100%;
+	height: 100%;
+}
+
+.dtpicker-mobile .dtpicker-cont {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border: none;
+}
+
+.dtpicker-content {
+	padding: 1em 0;
+	width: 100%;
+	background: $color-brown;
+}
+
+.dtpicker-mobile .dtpicker-content {
+	width: 97%;
+}
+
+.dtpicker-subcontent {
+	position: relative;
+}
+
+.dtpicker-header {
+	margin: 0.2em 1em;
+}
+
+.dtpicker-header .dtpicker-title {
+	color: #000;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.dtpicker-header .dtpicker-close {
+	position: absolute;
+	top: -0.7em;
+	right: 0.3em;
+	padding: 0.5em 0.5em 1em 1em;
+	color: $color-grey;
+	font-size: 1.5em;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.dtpicker-header .dtpicker-value {
+	padding: 0.8em 0.2em 0.2em 0.2em;
+	color: $color-blue;
+	text-align: center;
+	font-size: 1.4em;
+}
+
+.dtpicker-components {
+	overflow: hidden;
+	margin: 1em 1em;
+	font-size: 1.3em;
+}
+
+.dtpicker-components * {
+	margin: 0;
+	padding: 0;
+}
+
+.dtpicker-components .dtpicker-compOutline {
+	display: inline-block;
+	float: left;
+}
+
+.dtpicker-comp2 {
+	width: 50%;
+}
+
+.dtpicker-comp3 {
+	width: 33.3%;
+}
+
+.dtpicker-comp4 {
+	width: 25%;
+}
+
+.dtpicker-comp5 {
+	width: 20%;
+}
+
+.dtpicker-comp6 {
+	width: 16.66%;
+}
+
+.dtpicker-comp7 {
+	width: 14.285%;
+}
+
+.dtpicker-components .dtpicker-comp {
+	margin: 2%;
+	text-align: center;
+}
+
+.dtpicker-components .dtpicker-comp>* {
+	display: block;
+	height: 30px;
+	color: #2980B9;
+	text-align: center;
+	line-height: 30px;
+}
+
+.dtpicker-components .dtpicker-comp>*:hover {
+	color: #2980B9;
+}
+
+.dtpicker-components .dtpicker-compButtonEnable {
+	opacity: 1;
+}
+
+.dtpicker-components .dtpicker-compButtonDisable {
+	opacity: 0.5;
+}
+
+.dtpicker-components .dtpicker-compButton {
+	background: $color-brown;
+	text-decoration: none;
+	font-size: 140%;
+	cursor: pointer;
+}
+
+.dtpicker-components .dtpicker-compValue {
+	font-family: $font-regular;
+	margin: 0.4em 0;
+	width: 100%;
+	border: none;
+	background: $color-brown;
+	font-size: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.dtpicker-overlay .dtpicker-compValue:focus {
+	outline: none;
+	background: #F2FCFF;
+}
+
+.dtpicker-buttonCont {
+	overflow: hidden;
+	margin: 0.2em 1em;
+}
+
+.dtpicker-buttonCont .dtpicker-button {
+	display: block;
+	padding: 0.6em 0;
+	width: 47%;
+	background: #FF3B30;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 1.3em;
+	cursor: pointer;
+}
+
+.dtpicker-buttonCont .dtpicker-button:hover {
+	color: #FFFFFF;
+}
+
+.dtpicker-singleButton .dtpicker-button {
+	margin: 0.2em auto;
+}
+
+.dtpicker-twoButtons .dtpicker-buttonSet {
+	float: left;
+}
+
+.dtpicker-twoButtons .dtpicker-buttonClear {
+	float: right;
+}
+
+.revealator-fade,
+.revealator-slideup,
+.revealator-slideleft,
+.revealator-slideright,
+.revealator-slidedown,
+.revealator-zoomin,
+.revealator-zoomout,
+.revealator-rotateleft,
+.revealator-rotateright {
+	/* Default effect duration */
+	transition: all 600ms;
+}
+/* Fade effect */
+.revealator-fade {
+	opacity: 0;
+}
+.revealator-fade.revealator-within,
+.revealator-fade.revealator-partially-above,
+.revealator-fade.revealator-above {
+	opacity: 1;
+}
+/* Slide up effect */
+.revealator-slideup {
+	transform: translate(0, 100px);
+	opacity: 0;
+}
+.revealator-slideup.revealator-within,
+.revealator-slideup.revealator-partially-above,
+.revealator-slideup.revealator-above {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+/* Slide left effect */
+.revealator-slideleft {
+	transform: translate(100px, 0);
+	opacity: 0;
+}
+.revealator-slideleft.revealator-within,
+.revealator-slideleft.revealator-partially-above,
+.revealator-slideleft.revealator-above {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+/* Slide right effect */
+.revealator-slideright {
+	transform: translate(-100px, 0);
+	opacity: 0;
+}
+.revealator-slideright.revealator-within,
+.revealator-slideright.revealator-partially-above,
+.revealator-slideright.revealator-above {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+/* Slide down effect */
+.revealator-slidedown {
+	transform: translate(0, -100px);
+	opacity: 0;
+}
+.revealator-slidedown.revealator-within,
+.revealator-slidedown.revealator-partially-above,
+.revealator-slidedown.revealator-above {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+/* Zoom in effect */
+.revealator-zoomin {
+	transform: scale(0.75);
+	opacity: 0;
+}
+.revealator-zoomin.revealator-within,
+.revealator-zoomin.revealator-partially-above,
+.revealator-zoomin.revealator-above {
+	transform: scale(1);
+	opacity: 1;
+}
+/* Zoom out effect */
+.revealator-zoomout {
+	transform: scale(1.5);
+	opacity: 0;
+}
+.revealator-zoomout.revealator-within,
+.revealator-zoomout.revealator-partially-above,
+.revealator-zoomout.revealator-above {
+	transform: scale(1);
+	opacity: 1;
+}
+/* Rotate left effect */
+.revealator-rotateleft {
+	transform: rotate(20deg);
+	opacity: 0;
+}
+.revealator-rotateleft.revealator-within,
+.revealator-rotateleft.revealator-partially-above,
+.revealator-rotateleft.revealator-above {
+	transform: rotate(0deg);
+	opacity: 1;
+}
+/* Rotate right effect */
+.revealator-rotateright {
+	transform: rotate(-20deg);
+	opacity: 0;
+}
+.revealator-rotateright.revealator-within,
+.revealator-rotateright.revealator-partially-above,
+.revealator-rotateright.revealator-above {
+	transform: rotate(0deg);
+	opacity: 1;
+}
+.revealator-delay1 {
+	transition-delay: 100ms !important;
+}
+.revealator-delay1.revealator-below,
+.revealator-delay1.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay2 {
+	transition-delay: 200ms !important;
+}
+.revealator-delay2.revealator-below,
+.revealator-delay2.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay3 {
+	transition-delay: 300ms !important;
+}
+.revealator-delay3.revealator-below,
+.revealator-delay3.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay4 {
+	transition-delay: 400ms !important;
+}
+.revealator-delay4.revealator-below,
+.revealator-delay4.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay5 {
+	transition-delay: 500ms !important;
+}
+.revealator-delay5.revealator-below,
+.revealator-delay5.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay6 {
+	transition-delay: 600ms !important;
+}
+.revealator-delay6.revealator-below,
+.revealator-delay6.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay7 {
+	transition-delay: 700ms !important;
+}
+.revealator-delay7.revealator-below,
+.revealator-delay7.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay8 {
+	transition-delay: 800ms !important;
+}
+.revealator-delay8.revealator-below,
+.revealator-delay8.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay9 {
+	transition-delay: 900ms !important;
+}
+.revealator-delay9.revealator-below,
+.revealator-delay9.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay10 {
+	transition-delay: 1000ms !important;
+}
+.revealator-delay10.revealator-below,
+.revealator-delay10.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay11 {
+	transition-delay: 1100ms !important;
+}
+.revealator-delay11.revealator-below,
+.revealator-delay11.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay12 {
+	transition-delay: 1200ms !important;
+}
+.revealator-delay12.revealator-below,
+.revealator-delay12.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay13 {
+	transition-delay: 1300ms !important;
+}
+.revealator-delay13.revealator-below,
+.revealator-delay13.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay14 {
+	transition-delay: 1400ms !important;
+}
+.revealator-delay14.revealator-below,
+.revealator-delay14.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay15 {
+	transition-delay: 1500ms !important;
+}
+.revealator-delay15.revealator-below,
+.revealator-delay15.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay16 {
+	transition-delay: 1600ms !important;
+}
+.revealator-delay16.revealator-below,
+.revealator-delay16.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay17 {
+	transition-delay: 1700ms !important;
+}
+.revealator-delay17.revealator-below,
+.revealator-delay17.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay18 {
+	transition-delay: 1800ms !important;
+}
+.revealator-delay18.revealator-below,
+.revealator-delay18.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay19 {
+	transition-delay: 1900ms !important;
+}
+.revealator-delay19.revealator-below,
+.revealator-delay19.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay20 {
+	transition-delay: 2000ms !important;
+}
+.revealator-delay20.revealator-below,
+.revealator-delay20.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay21 {
+	transition-delay: 2100ms !important;
+}
+.revealator-delay21.revealator-below,
+.revealator-delay21.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay22 {
+	transition-delay: 2200ms !important;
+}
+.revealator-delay22.revealator-below,
+.revealator-delay22.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay23 {
+	transition-delay: 2300ms !important;
+}
+.revealator-delay23.revealator-below,
+.revealator-delay23.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay24 {
+	transition-delay: 2400ms !important;
+}
+.revealator-delay24.revealator-below,
+.revealator-delay24.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay25 {
+	transition-delay: 2500ms !important;
+}
+.revealator-delay25.revealator-below,
+.revealator-delay25.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay26 {
+	transition-delay: 2600ms !important;
+}
+.revealator-delay26.revealator-below,
+.revealator-delay26.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay27 {
+	transition-delay: 2700ms !important;
+}
+.revealator-delay27.revealator-below,
+.revealator-delay27.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay28 {
+	transition-delay: 2800ms !important;
+}
+.revealator-delay28.revealator-below,
+.revealator-delay28.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay29 {
+	transition-delay: 2900ms !important;
+}
+.revealator-delay29.revealator-below,
+.revealator-delay29.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-delay30 {
+	transition-delay: 3000ms !important;
+}
+.revealator-delay30.revealator-below,
+.revealator-delay30.revealator-partially-below {
+	transition-delay: 0ms !important;
+}
+.revealator-speed1,
+.revealator-duration1 {
+	transition-duration: 100ms !important;
+}
+.revealator-speed2,
+.revealator-duration2 {
+	transition-duration: 200ms !important;
+}
+.revealator-speed3,
+.revealator-duration3 {
+	transition-duration: 300ms !important;
+}
+.revealator-speed4,
+.revealator-duration4 {
+	transition-duration: 400ms !important;
+}
+.revealator-speed5,
+.revealator-duration5 {
+	transition-duration: 500ms !important;
+}
+.revealator-speed6,
+.revealator-duration6 {
+	transition-duration: 600ms !important;
+}
+.revealator-speed7,
+.revealator-duration7 {
+	transition-duration: 700ms !important;
+}
+.revealator-speed8,
+.revealator-duration8 {
+	transition-duration: 800ms !important;
+}
+.revealator-speed9,
+.revealator-duration9 {
+	transition-duration: 900ms !important;
+}
+.revealator-speed10,
+.revealator-duration10 {
+	transition-duration: 1000ms !important;
+}
+.revealator-speed11,
+.revealator-duration11 {
+	transition-duration: 1100ms !important;
+}
+.revealator-speed12,
+.revealator-duration12 {
+	transition-duration: 1200ms !important;
+}
+.revealator-speed13,
+.revealator-duration13 {
+	transition-duration: 1300ms !important;
+}
+.revealator-speed14,
+.revealator-duration14 {
+	transition-duration: 1400ms !important;
+}
+.revealator-speed15,
+.revealator-duration15 {
+	transition-duration: 1500ms !important;
+}

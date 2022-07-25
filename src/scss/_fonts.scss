@@ -1,0 +1,37 @@
+// stylelint-disable no-empty-source
+
+
+@font-face {
+	font-family: 'Hyundai-Regular';
+	src: url('../fonts/HyundaiSansHead-Regular.eot');
+	src: local('HyundaiSansHead-Regular'), local('HyundaiSansHead-Regular'),
+	url('../fonts/HyundaiSansHead-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/HyundaiSansHead-Regular.woff') format('woff'),
+	url('../fonts/HyundaiSansHead-Regular.ttf') format('truetype'),
+	url('../fonts/HyundaiSansHead-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Hyundai-Medium';
+	src: url('../fonts/HyundaiSansHead-Medium.eot');
+	src: local('HyundaiSansHead-Medium'), local('HyundaiSansHead-Medium'),
+	url('../fonts/HyundaiSansHead-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/HyundaiSansHead-Medium.woff') format('woff'),
+	url('../fonts/HyundaiSansHead-Medium.ttf') format('truetype'),
+	url('../fonts/HyundaiSansHead-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Hyundai-Bold';
+	src: url('../fonts/HyundaiSansHead-Bold.eot');
+	src: local('HyundaiSansHead-Bold'), local('HyundaiSansHead-Bold'),
+	url('../fonts/HyundaiSansHead-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/HyundaiSansHead-Bold.woff') format('woff'),
+	url('../fonts/HyundaiSansHead-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
